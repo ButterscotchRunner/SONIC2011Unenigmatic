@@ -2,7 +2,7 @@
 
 SONIC 2011 Unenigmatic is a tool to dump [SONIC 2011](https://gamejolt.com/games/sonic/783884)'s `data.win` file.
 
-SONIC 2011 uses Enigma to encrypt the executable, hence the name. Unenmigmatic tracks when Enigma tries to write the `data.win` file and dumps it to the `dump/datawin.dump` file.
+SONIC 2011 uses Enigma to encrypt the executable, hence the name. Unenigmatic tracks when Enigma tries to write the `data.win` file and dumps it to the `dump/datawin.dump` file.
 
 We need to do this instead of dumping it directly from memory because the YoYo Runner patches pointers in-place, so if you dumped directly from memory you would have pointers that do not point where they should to, so we need to get the `data.win` BEFORE the runner attempts to patch the pointers.
 
